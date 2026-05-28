@@ -6,7 +6,14 @@ int main(){
     cin>>a;
     cout<<"Enter the first number :";
     cin>>b;
-    for(int i=1; i<=a && i<=b ; i++){
-        
+    int num = (a>b)?a : b;
+    while (true){
+        if(num%a==0 && num%b==0){
+            LCM = num ;
+            break;
+        }
+        num++;
     }
+    cout<<" The LCM of given numbers is :"<<LCM<<endl;
+    return 0;
 }
