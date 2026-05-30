@@ -4,14 +4,16 @@ int main(){
     int n; 
     cout<<" Enter the number :";
     cin>>n;
-    int first=0;
-    int second=1;
-    int next;
-    for(int i =1; i<=n; i++){
-        next=first + second;
-        cout<<first<<" ";
-        first=second;
-        second=next;
+    if( n==0 ){
+        cout<<" 0 ";
     }
-    return 0;
+    int x = 0;
+    int y = 1;
+    for(int i=2 ; i<=n ; i++){
+        int z = x + y ;
+        x = y;
+        y = z;
+    }
+    cout<<" The Nth fibonacci term is :"<<y;
+    return 0 ;
 }
