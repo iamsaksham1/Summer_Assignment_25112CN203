@@ -4,7 +4,7 @@ int main(){
     int a,b,LCM;
     cout<<"Enter the first number :";
     cin>>a;
-    cout<<"Enter the first number :";
+    cout<<"Enter the second number :";
     cin>>b;
     int num = (a>b)?a : b;
     while (true){
