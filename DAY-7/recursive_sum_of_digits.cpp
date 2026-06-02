@@ -1,12 +1,10 @@
 #include<iostream>
 using namespace std;
 long long sum_of_digits( int n){
-    int sum=0;
-    while( n!=0 ){
-        int sum = sum + (n % 10);
-        n/=10;
-    }
+   if ( n==0){
     return 0;
+   }
+   return (n%10) + sum_of_digits(n/10);
 }
 int main(){
     int x;
