@@ -16,7 +16,6 @@ int main(){
     long long n;
     cout<<" enter the  binary digits :";
     cin>>n;
-
     cout<<"Decimal Digits are :"<<binary_to_decimal(n)<<endl;
     return 0;
 
