@@ -1,16 +1,19 @@
 #include <iostream>
-int main(){
+int main() {
     using namespace std;
-    int a , b , GCD;
-    cout<<"enter the first number :";
-    cin>>a;
-    cout<<"enter the second number :";
-    cin>>b;
-    for(int i=1; i<=a && i<=b ; i++){
-        if(a%i == 0 && b%i == 0){
-            GCD = i;
-        }
+    int a, b;
+    cout << "enter the first number :";
+    cin >> a;
+    cout << "enter the second number :";
+    cin >> b;
+
+    // Euclidean algorithm — handles 0 correctly
+    int x = a, y = b;
+    while (y != 0) {
+        int temp = y;
+        y = x % y;
+        x = temp;
     }
-    cout<<"The GCD of these numbers is :"<<GCD<<endl;
+    cout << "The GCD of these numbers is :" << x << endl;
     return 0;
 }
