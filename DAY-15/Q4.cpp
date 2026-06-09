@@ -13,24 +13,18 @@ int main() {
     for(int i = 0; i < l; i++) {
         cin >> arr[i];
     }
-
-    int j = 0;
-
-    for(int i = 0; i < l; i++) {
-        if(arr[i] != 0) {
-            arr[j] = arr[i];
-            j++;
+    vector <int> temp;
+    for(int i=0; i<l; i++){
+        if(arr[i]!=0){
+            temp.push_back(arr[i]);
         }
     }
-
-    while(j < l) {
-        arr[j] = 0;
-        j++;
+    int non_zero= temp.size();
+    for(int i=0; i<non_zero; i++ ){
+        arr[i]=temp[i];
     }
-
-    cout << "After zeroes moved to last :" << endl;
-    for(int i = 0; i < l; i++) {
-        cout << arr[i] << " ";
+    for(int i =non_zero; i<n; i++){
+        arr[i]=0;
     }
 
     return 0;
